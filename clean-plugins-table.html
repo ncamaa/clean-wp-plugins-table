@@ -1,0 +1,22 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script>
+	jQuery(document).ready(function(){
+		$('table tr th:first-child').remove();
+		$('.row-actions').remove();
+		$('thead').remove();
+		$('.plugin-version-author-uri a').remove();
+		let verText = $('.plugin-version-author-uri').text();
+		verText = verText.split('|')[0];
+		$('.plugin-version-author-uri').text(verText);
+		$('button.toggle-row').remove();
+		$('.plugin-description').remove();
+		$('.update-message.notice.inline.notice-warning.notice-alt').remove();
+		$('tfoot').remove();
+		$('*')
+			.removeAttr('data-slug')
+			.removeAttr('class')
+			.removeAttr('id')
+			.removeAttr('data-plugin');
+	});
+</script>
