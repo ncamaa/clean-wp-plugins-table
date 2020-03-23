@@ -6,9 +6,12 @@
 		$('.row-actions').remove();
 		$('thead').remove();
 		$('.plugin-version-author-uri a').remove();
-		let verText = $('.plugin-version-author-uri').text();
-		verText = verText.split('|')[0];
-		$('.plugin-version-author-uri').text(verText);
+		$('.plugin-version-author-uri').each(function () {
+			let that = $(this);
+			let verText = that.text();
+			verText = verText.split('|')[0];
+			that.text(verText);
+		});
 		$('button.toggle-row').remove();
 		$('.plugin-description').remove();
 		$('.update-message.notice.inline.notice-warning.notice-alt').remove();
